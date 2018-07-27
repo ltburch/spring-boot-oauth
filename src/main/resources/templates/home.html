@@ -6,6 +6,7 @@
     <body>
         <h1>Welcome!</h1>
         
-        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+        <p>Click <a th:href="@{/hello}">here</a> to hit authenticated URL</p>
+        <p>Click <a th:href="@{/hello?impersonate=ltburch}">here</a> to hit ltburch</p>
     </body>
 </html>

@@ -9,7 +9,7 @@
 
     </head>
     <body>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.userPrincipal.name}]]!</h1>
         <form method="POST" id="logoutForm" action="/logout">
     		<button onClick="$('#logoutForm').submit();" class="btn btn-primary">Logout</button>
     	</form>
