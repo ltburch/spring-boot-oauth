@@ -15,6 +15,13 @@
 	</parent>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+
 		<!-- Object Mapping -->
 		<dependency>
 			<groupId>ma.glasnost.orika</groupId>
@@ -121,7 +128,19 @@
 				<artifactId>jaxws-maven-plugin</artifactId>
 				<configuration>
 					<!-- ${basedir}/src/main/resources/wsdl/ -->
-					<wsdlFiles>bhcCisInService.xml</wsdlFiles>
+					<wsdlFiles>
+						<wsdlFile>
+							bhcCisInService.xml
+						</wsdlFile>
+						<wsdlFile>
+							outage.xml
+						</wsdlFile>
+						<!-- 
+						<wsdlFile>
+							user.xml
+						</wsdlFile>
+						 -->
+					</wsdlFiles>
 					<packageName>com.raps.code.generate.ws</packageName>
 					<keep>true</keep>
 					<sourceDestDir>${basedir}/target/generated/src/main/java</sourceDestDir>
